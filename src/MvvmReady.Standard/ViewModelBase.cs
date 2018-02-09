@@ -7,7 +7,7 @@ namespace Juniansoft.MvvmReady
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
-        protected bool Set<T>(ref T backingStore, T value,
+        public bool Set<T>(ref T backingStore, T value,
             [CallerMemberName]string propertyName = "",
             Action onChanged = null)
         {
@@ -19,7 +19,7 @@ namespace Juniansoft.MvvmReady
             return true;
         }
 
-        protected void RaisePropertyChanged([CallerMemberName]string propertyName = "", Action onChanged = null)
+        public void RaisePropertyChanged([CallerMemberName]string propertyName = "", Action onChanged = null)
         {
             onChanged?.Invoke();
             OnPropertyChanged(propertyName);
