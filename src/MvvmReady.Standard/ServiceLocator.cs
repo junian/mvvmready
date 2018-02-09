@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MvvmReady
+namespace Juniansoft.MvvmReady
 {
     public sealed class ServiceLocator
     {

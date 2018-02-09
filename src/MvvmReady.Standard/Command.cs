@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace MvvmReady
+namespace Juniansoft.MvvmReady
 {
     public sealed class Command<T> : Command
     {
