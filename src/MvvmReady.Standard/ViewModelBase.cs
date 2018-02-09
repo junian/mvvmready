@@ -7,7 +7,7 @@ namespace MvvmReady
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
-        protected bool SetProperty<T>(ref T backingStore, T value,
+        protected bool Set<T>(ref T backingStore, T value,
             [CallerMemberName]string propertyName = "",
             Action onChanged = null)
         {
@@ -15,9 +15,14 @@ namespace MvvmReady
                 return false;
 
             backingStore = value;
+            RaisePropertyChanged(propertyName, onChanged);
+            return true;
+        }
+
+        protected void RaisePropertyChanged([CallerMemberName]string propertyName = "", Action onChanged = null)
+        {
             onChanged?.Invoke();
             OnPropertyChanged(propertyName);
-            return true;
         }
 
         #region INotifyPropertyChanged
