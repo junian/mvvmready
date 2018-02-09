@@ -4,6 +4,17 @@
     <TargetFramework>netstandard1.0</TargetFramework>
     <RootNamespace>Juniansoft.MvvmReady</RootNamespace>
     <AssemblyName>MvvmReady</AssemblyName>
+    <Authors>Junian Triajianto</Authors>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageLicenseUrl>https://github.com/junian/mvvmready/blob/master/LICENSE</PackageLicenseUrl>
+    <Owners>Junian Triajianto</Owners>
+    <PackageProjectUrl>https://lab.junian.net/mvvmready/</PackageProjectUrl>
+    <PackageReleaseNotes>v1.0.0
+- Initial release with Command, ViewModelBase, and ServiceLocator</PackageReleaseNotes>
+    <Summary>Make cross-platform app MVVM-ready with with only single lightweight small binary or file.</Summary>
+    <PackageTags>mvvm,lightweight,portable</PackageTags>
+    <Title>MvvmReady</Title>
+    <Description>Make cross-platform app MVVM-ready with with only single lightweight small binary or file.</Description>
   </PropertyGroup>
 
 </Project>
