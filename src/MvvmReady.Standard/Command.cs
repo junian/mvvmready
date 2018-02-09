@@ -27,10 +27,7 @@ namespace Juniansoft.MvvmReady
 
         public Command(Action<object> execute)
         {
-            if (execute == null)
-                throw new ArgumentNullException(nameof(execute));
-
-            this.execute = execute;
+            this.execute = execute ?? throw new ArgumentNullException(nameof(execute));
         }
 
         public Command(Action execute) : this(o => execute())
@@ -41,10 +38,7 @@ namespace Juniansoft.MvvmReady
 
         public Command(Action<object> execute, Func<object, bool> canExecute) : this(execute)
         {
-            if (canExecute == null)
-                throw new ArgumentNullException(nameof(canExecute));
-
-            this.canExecute = canExecute;
+            this.canExecute = canExecute ?? throw new ArgumentNullException(nameof(canExecute));
         }
 
         public Command(Action execute, Func<bool> canExecute) : this(o => execute(), o => canExecute())
@@ -72,9 +66,7 @@ namespace Juniansoft.MvvmReady
 
         public void ChangeCanExecute()
         {
-            EventHandler changed = CanExecuteChanged;
-            if (changed != null)
-                changed(this, EventArgs.Empty);
+            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }
