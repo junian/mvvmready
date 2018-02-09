@@ -1,1 +1,5 @@
 theme: jekyll-theme-cayman
+title: MvvmReady
+description: Make your cross-platform MVVM-ready with only single binary/file.
+show_downloads: true
+google_analytics: UA-113890655-4
