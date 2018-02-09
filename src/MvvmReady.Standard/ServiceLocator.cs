@@ -12,11 +12,11 @@ namespace Juniansoft.MvvmReady
 
         public void Register<TContract, TService>(string key = "") where TService : new()
         {
-            var contractKey = typeof(TContract);
+            var instanceType = typeof(TContract);
 
-            Ensure(contractKey);
+            EnsureLazyDictionary(instanceType);
 
-            registeredServices[contractKey][key] =
+            registeredServices[instanceType][key] =
                 new Lazy<object>(() => Activator.CreateInstance(typeof(TService)));
         }
 
@@ -27,22 +27,27 @@ namespace Juniansoft.MvvmReady
 
         public T Get<T>(string key = "") where T : class
         {
-            var contractKey = typeof(T);
+            var instanceType = typeof(T);
 
-            Ensure(contractKey);
+            EnsureLazyDictionary(instanceType);
 
-            if (registeredServices.TryGetValue(typeof(T), out var dict))
+            if (registeredServices.TryGetValue(instanceType, out var dict))
             {
                 if (dict.TryGetValue(key, out var service))
                 {
-                    return (T)service.Value;
+                    return (T) service.Value;
+                }
+                else
+                {
+                    dict[key] = new Lazy<object>(() => Activator.CreateInstance(instanceType));
+                    return (T) dict[key].Value;
                 }
             }
 
             throw new Exception($"Couldn't find service with type of {typeof(T).FullName}");
         }
 
-        private void Ensure(Type contractKey)
+        private void EnsureLazyDictionary(Type contractKey)
         {
             if (!registeredServices.ContainsKey(contractKey))
                 registeredServices[contractKey] = new Dictionary<string, Lazy<object>>();
