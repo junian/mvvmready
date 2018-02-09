@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard1.0;netstandard1.3;netstandard2.0;</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard1.3;netstandard1.0;net45;</TargetFrameworks>
     <RootNamespace>Juniansoft.MvvmReady</RootNamespace>
     <AssemblyName>MvvmReady</AssemblyName>
     <Authors>Junian Triajianto</Authors>

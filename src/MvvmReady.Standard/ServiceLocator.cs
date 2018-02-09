@@ -5,19 +5,22 @@ namespace Juniansoft.MvvmReady
 {
     public sealed class ServiceLocator
     {
-        static readonly Lazy<ServiceLocator> instance = new Lazy<ServiceLocator>(() => new ServiceLocator());
-        readonly Dictionary<Type, Dictionary<string, Lazy<object>>> registeredServices = new Dictionary<Type, Dictionary<string, Lazy<object>>>();
+        private readonly Dictionary<Type, Type> types = new Dictionary<Type, Type>();
+        private readonly Dictionary<Type, Dictionary<string, Lazy<object>>> instances = new Dictionary<Type, Dictionary<string, Lazy<object>>>();
 
-        public static ServiceLocator Current => instance.Value;
+        private static readonly Lazy<ServiceLocator> current = new Lazy<ServiceLocator>(() => new ServiceLocator());
+        public static ServiceLocator Current => current.Value;
 
         public void Register<TContract, TService>(string key = "") where TService : new()
         {
-            var instanceType = typeof(TContract);
+            var contractType = typeof(TContract);
+            var serviceType = typeof(TService);
 
-            EnsureLazyDictionary(instanceType);
+            Register(contractType, serviceType);
 
-            registeredServices[instanceType][key] =
-                new Lazy<object>(() => Activator.CreateInstance(typeof(TService)));
+            instances[contractType][key] = new Lazy<object>(
+                () => Activator.CreateInstance(serviceType)
+            );
         }
 
         public void Register<TService>(string key = "") where TService : new()
@@ -27,30 +30,33 @@ namespace Juniansoft.MvvmReady
 
         public T Get<T>(string key = "") where T : class
         {
-            var instanceType = typeof(T);
+            var contractType = typeof(T);
 
-            EnsureLazyDictionary(instanceType);
-
-            if (registeredServices.TryGetValue(instanceType, out var dict))
+            if (types.TryGetValue(contractType, out var serviceType) && instances.TryGetValue(contractType, out var dict))
             {
-                if (dict.TryGetValue(key, out var service))
+                if (dict.TryGetValue(key, out var lazy))
                 {
-                    return (T) service.Value;
+                    return (T)lazy.Value;
                 }
                 else
                 {
-                    dict[key] = new Lazy<object>(() => Activator.CreateInstance(instanceType));
-                    return (T) dict[key].Value;
+                    dict[key] = new Lazy<object>(
+                        () => Activator.CreateInstance(serviceType)
+                    );
+                    return (T)dict[key].Value;
                 }
             }
 
             throw new Exception($"Couldn't find service with type of {typeof(T).FullName}");
         }
 
-        private void EnsureLazyDictionary(Type contractKey)
+        private void Register(Type contractType, Type serviceType)
         {
-            if (!registeredServices.ContainsKey(contractKey))
-                registeredServices[contractKey] = new Dictionary<string, Lazy<object>>();
+            if(!types.ContainsKey(contractType))
+                types[contractType] = serviceType;
+
+            if (!instances.ContainsKey(contractType))
+                instances[contractType] = new Dictionary<string, Lazy<object>>();
         }
     }
 }
