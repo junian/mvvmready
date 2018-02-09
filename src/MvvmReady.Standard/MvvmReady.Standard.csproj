@@ -7,25 +7,24 @@
     <Authors>Junian Triajianto</Authors>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageLicenseUrl>https://github.com/junian/mvvmready/blob/master/LICENSE</PackageLicenseUrl>
-    <Owners>Junian Triajianto</Owners>
+    <Owners>junian</Owners>
     <PackageProjectUrl>https://lab.junian.net/mvvmready/</PackageProjectUrl>
-    <PackageReleaseNotes>v1.0.1
-- Add target framework net45, netstandard1.3, and netstandard2.0
-
-v1.0.0
-- Initial release with Command, ViewModelBase, and ServiceLocator</PackageReleaseNotes>
+    <PackageReleaseNotes>v1.0.2
+- Basic object: Command, ServiceLocator, and ViewModelBase
+- Fix ServiceLocator bug
+- Expose ViewModelBase functions</PackageReleaseNotes>
     <Summary>Make cross-platform app MVVM-ready with with only single lightweight small binary or file.</Summary>
     <PackageTags>mvvm,lightweight,portable</PackageTags>
     <Title>MvvmReady</Title>
     <Description>Make cross-platform app MVVM-ready with only single lightweight small binary or file.</Description>
-    <ReleaseVersion>1.0.1</ReleaseVersion>
     <PackageId>MvvmReady</PackageId>
     <Copyright>(c) 2018</Copyright>
     <RepositoryUrl>https://github.com/junian/mvvmready</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>MvvmReady.snk</AssemblyOriginatorKeyFile>
-    <Version>1.0.1</Version>
+    <ReleaseVersion>1.0.2</ReleaseVersion>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
 </Project>
