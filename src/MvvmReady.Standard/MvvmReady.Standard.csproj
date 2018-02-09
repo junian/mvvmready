@@ -17,6 +17,9 @@
     <Description>Make cross-platform app MVVM-ready with with only single lightweight small binary or file.</Description>
     <ReleaseVersion>1.0.0</ReleaseVersion>
     <PackageId>MvvmReady</PackageId>
+    <Copyright>(c) 2018</Copyright>
+    <RepositoryUrl>https://github.com/junian/mvvmready</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
 </Project>
