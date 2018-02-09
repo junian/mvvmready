@@ -15,6 +15,7 @@
     <PackageTags>mvvm,lightweight,portable</PackageTags>
     <Title>MvvmReady</Title>
     <Description>Make cross-platform app MVVM-ready with with only single lightweight small binary or file.</Description>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
   </PropertyGroup>
 
 </Project>
