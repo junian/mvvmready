@@ -2,6 +2,13 @@
 
 Make your Cross-platform app Mvvm-Ready. Lightweight with only one small binary/file.
 
+## NuGet
+
+[![NuGet](https://img.shields.io/nuget/v/MvvmReady.svg?label=NuGet)](https://www.nuget.org/packages/MvvmReady)
+
+Get [MvvmReady](http://www.nuget.org/packages/MvvmReady) library from NuGet.
+
+
 ## Features
 
 ### Command
