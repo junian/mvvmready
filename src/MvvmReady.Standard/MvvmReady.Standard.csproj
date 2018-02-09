@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
+    <RootNamespace>Juniansoft.MvvmReady</RootNamespace>
+    <AssemblyName>MvvmReady</AssemblyName>
   </PropertyGroup>
 
 </Project>
