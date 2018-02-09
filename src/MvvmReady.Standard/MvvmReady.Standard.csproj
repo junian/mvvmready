@@ -20,6 +20,8 @@
     <Copyright>(c) 2018</Copyright>
     <RepositoryUrl>https://github.com/junian/mvvmready</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>MvvmReady.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
 </Project>
