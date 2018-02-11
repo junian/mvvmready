@@ -11,6 +11,15 @@ namespace Juniansoft.MvvmReady
         private static readonly Lazy<ServiceLocator> current = new Lazy<ServiceLocator>(() => new ServiceLocator());
         public static ServiceLocator Current => current.Value;
 
+        private void Register(Type contractType, Type serviceType)
+        {
+            if (!types.ContainsKey(contractType))
+                types[contractType] = serviceType;
+
+            if (!instances.ContainsKey(contractType))
+                instances[contractType] = new Dictionary<string, Lazy<object>>();
+        }
+
         public void Register<TContract, TService>(string key = "") where TService : new()
         {
             var contractType = typeof(TContract);
@@ -27,7 +36,7 @@ namespace Juniansoft.MvvmReady
         {
             Register<TService, TService>(key);
         }
-
+        
         public T Get<T>(string key = "") where T : class
         {
             var contractType = typeof(T);
@@ -48,15 +57,6 @@ namespace Juniansoft.MvvmReady
             }
 
             throw new Exception($"Couldn't find service with type of {typeof(T).FullName}");
-        }
-
-        private void Register(Type contractType, Type serviceType)
-        {
-            if(!types.ContainsKey(contractType))
-                types[contractType] = serviceType;
-
-            if (!instances.ContainsKey(contractType))
-                instances[contractType] = new Dictionary<string, Lazy<object>>();
         }
     }
 }

@@ -8,13 +8,9 @@
     <PackageLicenseUrl>https://github.com/junian/mvvmready/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>junian</Owners>
     <PackageProjectUrl>https://lab.junian.net/mvvmready/</PackageProjectUrl>
-    <PackageReleaseNotes>v1.0.3
-- Fix ServiceLocator key-based Get bug.
-      
-v1.0.2
-- Basic object: Command, ServiceLocator, and ViewModelBase
-- Fix ServiceLocator bug
-- Expose ViewModelBase functions</PackageReleaseNotes>
+    <PackageReleaseNotes>v1.1.0
+
+- Stable initial release with `Command`, `ServiceLocator`, and `ViewModelBase`</PackageReleaseNotes>
     <Summary>Make cross-platform app MVVM-ready with with only single lightweight small binary or file.</Summary>
     <PackageTags>mvvm,lightweight,portable</PackageTags>
     <Title>MvvmReady</Title>
@@ -26,10 +22,12 @@ v1.0.2
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>MvvmReady.snk</AssemblyOriginatorKeyFile>
     <ReleaseVersion>1.0.3</ReleaseVersion>
-    <Version>1.0.3</Version>
+    <Version>1.1.0</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageIconUrl>https://3.bp.blogspot.com/-56Kz5T5WL04/Wn_KIg1oEkI/AAAAAAAAC1I/vCszFiZ8SjkW22dAKeCfml74SSfy1i_7wCLcBGAs/s1600/mvvmready.png</PackageIconUrl>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)' == 'portable-net45+win8+wpa81+wp8'">
     <TargetFrameworkIdentifier>.NETPortable</TargetFrameworkIdentifier>
