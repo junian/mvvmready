@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard1.3;netstandard1.0;net45;</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard1.3;netstandard1.0;net45;portable-net45+win8+wpa81+wp8;</TargetFrameworks>
     <RootNamespace>Juniansoft.MvvmReady</RootNamespace>
     <AssemblyName>MvvmReady</AssemblyName>
     <Authors>Junian Triajianto</Authors>
@@ -29,5 +28,11 @@ v1.0.2
     <ReleaseVersion>1.0.3</ReleaseVersion>
     <Version>1.0.3</Version>
   </PropertyGroup>
-
+  <PropertyGroup Condition="'$(TargetFramework)' == 'portable-net45+win8+wpa81+wp8'">
+    <TargetFrameworkIdentifier>.NETPortable</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <NugetTargetMoniker>.NETPortable,Version=v0.0,Profile=Profile259</NugetTargetMoniker>
+    <LanguageTargets>$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets</LanguageTargets>
+  </PropertyGroup>
 </Project>
