@@ -29,6 +29,7 @@ v1.0.2
     <Version>1.0.3</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageIconUrl>https://3.bp.blogspot.com/-56Kz5T5WL04/Wn_KIg1oEkI/AAAAAAAAC1I/vCszFiZ8SjkW22dAKeCfml74SSfy1i_7wCLcBGAs/s1600/mvvmready.png</PackageIconUrl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)' == 'portable-net45+win8+wpa81+wp8'">
     <TargetFrameworkIdentifier>.NETPortable</TargetFrameworkIdentifier>
