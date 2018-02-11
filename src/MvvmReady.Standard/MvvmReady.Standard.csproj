@@ -10,7 +10,8 @@
     <PackageProjectUrl>https://lab.junian.net/mvvmready/</PackageProjectUrl>
     <PackageReleaseNotes>v1.1.0
 
-- Stable initial release with `Command`, `ServiceLocator`, and `ViewModelBase`</PackageReleaseNotes>
+- Stable initial release with `Command`, `ServiceLocator`, and `ViewModelBase`
+- Add support to .NET 4.5, PCL profile 259, and .NET Standard</PackageReleaseNotes>
     <Summary>Make cross-platform app MVVM-ready with with only single lightweight small binary or file.</Summary>
     <PackageTags>mvvm,lightweight,portable</PackageTags>
     <Title>MvvmReady</Title>
