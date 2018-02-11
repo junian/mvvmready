@@ -27,6 +27,7 @@ v1.0.2
     <AssemblyOriginatorKeyFile>MvvmReady.snk</AssemblyOriginatorKeyFile>
     <ReleaseVersion>1.0.3</ReleaseVersion>
     <Version>1.0.3</Version>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)' == 'portable-net45+win8+wpa81+wp8'">
     <TargetFrameworkIdentifier>.NETPortable</TargetFrameworkIdentifier>
