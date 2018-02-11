@@ -1,13 +1,17 @@
 # MvvmReady
 
-Make your Cross-platform app Mvvm-Ready. Lightweight with only one small binary/file.
-
-## NuGet
-
 [![NuGet](https://img.shields.io/nuget/v/MvvmReady.svg?label=NuGet)](https://www.nuget.org/packages/MvvmReady)
 [![Build status](https://ci.appveyor.com/api/projects/status/github/junian/mvvmready?svg=true)](https://ci.appveyor.com/project/junian/mvvmready)
 
+Make your Cross-platform app Mvvm-Ready. Lightweight with only one small binary/file.
+
+## Installation
+
 Get [MvvmReady](http://www.nuget.org/packages/MvvmReady) library from NuGet.
+
+```
+PM> Install-Package MvvmReady
+```
 
 
 ## Features
