@@ -5,43 +5,51 @@ namespace Juniansoft.MvvmReady
 {
     public sealed class ServiceLocator
     {
-        private readonly Dictionary<Type, Type> types = new Dictionary<Type, Type>();
+        private readonly Dictionary<Type, Func<object>> createFuncs = new Dictionary<Type, Func<object>>();
         private readonly Dictionary<Type, Dictionary<string, Lazy<object>>> instances = new Dictionary<Type, Dictionary<string, Lazy<object>>>();
 
         private static readonly Lazy<ServiceLocator> current = new Lazy<ServiceLocator>(() => new ServiceLocator());
         public static ServiceLocator Current => current.Value;
 
-        private void Register(Type contractType, Type serviceType)
+        private void Register(Type contractType, Func<object> func)
         {
-            if (!types.ContainsKey(contractType))
-                types[contractType] = serviceType;
+            if (!createFuncs.ContainsKey(contractType))
+                createFuncs[contractType] = func;
 
             if (!instances.ContainsKey(contractType))
                 instances[contractType] = new Dictionary<string, Lazy<object>>();
         }
 
-        public void Register<TContract, TService>(string key = "") where TService : new()
+        private void Register(Type contractType, Type serviceType)
+        {
+            Register(contractType, () => Activator.CreateInstance(serviceType));
+        }
+
+        public void Register<TContract, TService>() where TService : new()
         {
             var contractType = typeof(TContract);
             var serviceType = typeof(TService);
 
             Register(contractType, serviceType);
-
-            instances[contractType][key] = new Lazy<object>(
-                () => Activator.CreateInstance(serviceType)
-            );
         }
 
-        public void Register<TService>(string key = "") where TService : new()
+        public void Register<TContract>(Func<object> createInstanceFunc)
         {
-            Register<TService, TService>(key);
+            var contractType = typeof(TContract);
+
+            Register(contractType, createInstanceFunc);
+        }
+
+        public void Register<TService>() where TService : new()
+        {
+            Register<TService, TService>();
         }
         
         public T Get<T>(string key = "") where T : class
         {
             var contractType = typeof(T);
 
-            if (types.TryGetValue(contractType, out var serviceType) && instances.TryGetValue(contractType, out var dict))
+            if (createFuncs.TryGetValue(contractType, out var createFunc) && instances.TryGetValue(contractType, out var dict))
             {
                 if (dict.TryGetValue(key, out var lazy))
                 {
@@ -49,9 +57,7 @@ namespace Juniansoft.MvvmReady
                 }
                 else
                 {
-                    dict[key] = new Lazy<object>(
-                        () => Activator.CreateInstance(serviceType)
-                    );
+                    dict[key] = new Lazy<object>(createFunc);
                     return (T)dict[key].Value;
                 }
             }

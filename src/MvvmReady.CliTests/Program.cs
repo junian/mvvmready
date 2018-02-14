@@ -23,6 +23,12 @@ namespace MvvmReady.CliTests
             b.SayHello();
             c.SayHello();
             d.SayHello();
+
+            ServiceLocator.Current.Register<SingletonService>(() => SingletonService.Instance);
+            var e = ServiceLocator.Current.Get<SingletonService>();
+            var f = ServiceLocator.Current.Get<SingletonService>();
+            Console.WriteLine(e.ID);
+            Console.WriteLine(f.ID);
         }
     }
 }
