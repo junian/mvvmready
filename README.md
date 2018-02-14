@@ -38,6 +38,8 @@ You can register interface to implementation by using `ServiceLocator.Current.Re
 
 You can also register service to itself by using `ServiceLocator.Current.Register<Service>()`.
 
+You can register a singleton service by using `ServiceLocator.Current.Register<IInterface>(() => MyService.Instance)`.
+
 To get service object, use `ServiceLocator.Current.Get<IService>()`.
 
 ## License
