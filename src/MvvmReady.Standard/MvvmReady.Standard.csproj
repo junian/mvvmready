@@ -8,7 +8,11 @@
     <PackageLicenseUrl>https://github.com/junian/mvvmready/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>junian</Owners>
     <PackageProjectUrl>https://lab.junian.net/mvvmready/</PackageProjectUrl>
-    <PackageReleaseNotes>v1.1.0
+    <PackageReleaseNotes>v1.2.0
+
+- ServiceLocator now can register singleton object
+            
+v1.1.0
 
 - Stable initial release with `Command`, `ServiceLocator`, and `ViewModelBase`
 - Add support to .NET 4.5, PCL profile 259, and .NET Standard</PackageReleaseNotes>
@@ -25,10 +29,10 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageIconUrl>https://3.bp.blogspot.com/-56Kz5T5WL04/Wn_KIg1oEkI/AAAAAAAAC1I/vCszFiZ8SjkW22dAKeCfml74SSfy1i_7wCLcBGAs/s1600/mvvmready.png</PackageIconUrl>
-    <ReleaseVersion>1.1.0</ReleaseVersion>
-    <Version>1.1.0</Version>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
+    <ReleaseVersion>1.2.0</ReleaseVersion>
+    <Version>1.2.0</Version>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)' == 'portable-net45+win8+wpa81+wp8'">
     <TargetFrameworkIdentifier>.NETPortable</TargetFrameworkIdentifier>
