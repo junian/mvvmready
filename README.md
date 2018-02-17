@@ -4,6 +4,8 @@
 
 ## About
 
+![](https://3.bp.blogspot.com/-56Kz5T5WL04/Wn_KIg1oEkI/AAAAAAAAC1I/vCszFiZ8SjkW22dAKeCfml74SSfy1i_7wCLcBGAs/s1600/mvvmready.png)
+
 Make your Cross-platform app Mvvm-Ready. Lightweight with only one small binary/file.
 
 ## Installation
