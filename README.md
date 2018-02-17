@@ -10,7 +10,7 @@ Make your Cross-platform app Mvvm-Ready. Lightweight with only one small binary/
 
 Get [MvvmReady](http://www.nuget.org/packages/MvvmReady) library from NuGet.
 
-```
+```powershell
 PM> Install-Package MvvmReady
 ```
 
