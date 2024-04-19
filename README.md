@@ -1,12 +1,16 @@
-[![NuGet](https://img.shields.io/nuget/v/MvvmReady.svg?label=NuGet)](https://www.nuget.org/packages/MvvmReady)
-[![NuGet](https://img.shields.io/nuget/dt/MvvmReady.svg)](https://www.nuget.org/packages/MvvmReady)
-[![Build status](https://ci.appveyor.com/api/projects/status/msra1f35qd83uayo?svg=true)](https://ci.appveyor.com/project/junian/mvvmready)
+<p align="center"><img src="https://3.bp.blogspot.com/-56Kz5T5WL04/Wn_KIg1oEkI/AAAAAAAAC1I/vCszFiZ8SjkW22dAKeCfml74SSfy1i_7wCLcBGAs/s1600/mvvmready.png" alt="MvvmReady Logo"></p>
 
-## About
+<h1 align="center">MvvmReady</h1>
 
-![](https://3.bp.blogspot.com/-56Kz5T5WL04/Wn_KIg1oEkI/AAAAAAAAC1I/vCszFiZ8SjkW22dAKeCfml74SSfy1i_7wCLcBGAs/s1600/mvvmready.png)
+<p align="center">Make cross-platform app MVVM-Ready. Lightweight with only one small binary/file.</p>
 
-Make cross-platform app MVVM-Ready. Lightweight with only one small binary/file.
+<p align="center">
+    <a href="https://www.nuget.org/packages/MvvmReady/"><img src="https://img.shields.io/nuget/v/MvvmReady.svg?label=NuGet" alt="MvvmReady latest version on NuGet" title="MvvmReady latest version on NuGet"></a>
+    <a href="https://www.nuget.org/packages/MvvmReady/"><img src="https://img.shields.io/nuget/dt/MvvmReady.svg" alt="MvvmReady total downloads on NuGet" title="MvvmReady total downloads on NuGet"></a>
+    <a href="https://twitter.com/JunianDev"><img src="https://img.shields.io/twitter/follow/juniandev" alt="Follow me on X" title="Follow me on X"></a>
+</p>
+
+----
 
 ## Installation
 
