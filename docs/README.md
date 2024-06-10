@@ -5,9 +5,8 @@
 <p align="center">Make cross-platform app MVVM-Ready. Lightweight with only one small binary/file.</p>
 
 <p align="center">
-    <a href="https://www.nuget.org/packages/MvvmReady/"><img src="https://img.shields.io/nuget/v/MvvmReady.svg?label=NuGet" alt="MvvmReady latest version on NuGet" title="MvvmReady latest version on NuGet"></a>
-    <a href="https://www.nuget.org/packages/MvvmReady/"><img src="https://img.shields.io/nuget/dt/MvvmReady.svg" alt="MvvmReady total downloads on NuGet" title="MvvmReady total downloads on NuGet"></a>
-    <a href="https://twitter.com/JunianDev"><img src="https://img.shields.io/twitter/follow/juniandev" alt="Follow me on X" title="Follow me on X"></a>
+    <a href="https://www.nuget.org/packages/MvvmReady/"><img src="https://img.shields.io/nuget/v/MvvmReady.svg?style=for-the-badge&label=NuGet" alt="MvvmReady latest version on NuGet" title="MvvmReady latest version on NuGet"></a>
+    <a href="https://www.nuget.org/packages/MvvmReady/"><img src="https://img.shields.io/nuget/dt/MvvmReady.svg?style=for-the-badge" alt="MvvmReady total downloads on NuGet" title="MvvmReady total downloads on NuGet"></a>
 </p>
 
 ----
