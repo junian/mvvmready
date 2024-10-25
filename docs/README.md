@@ -5,6 +5,7 @@
 <p align="center">Make cross-platform app MVVM-Ready. Lightweight with only one small binary/file.</p>
 
 <p align="center">
+    <a href="https://github.com/junian/mvvmready/"><img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white&style=for-the-badge" alt="MvvmReady on GitHub" title="MvvmReady on GitHub"></a>
     <a href="https://www.nuget.org/packages/MvvmReady/"><img src="https://img.shields.io/nuget/v/MvvmReady.svg?style=for-the-badge&label=NuGet" alt="MvvmReady latest version on NuGet" title="MvvmReady latest version on NuGet"></a>
     <a href="https://www.nuget.org/packages/MvvmReady/"><img src="https://img.shields.io/nuget/dt/MvvmReady.svg?style=for-the-badge" alt="MvvmReady total downloads on NuGet" title="MvvmReady total downloads on NuGet"></a>
 </p>
@@ -16,7 +17,7 @@
 Get [MvvmReady](http://www.nuget.org/packages/MvvmReady) library from NuGet.
 
 ```powershell
-PM> Install-Package MvvmReady
+dotnet add package MvvmReady
 ```
 
 
