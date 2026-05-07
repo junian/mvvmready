@@ -1,6 +1,3 @@
-<p align="center">
-    <!--<img src="https://3.bp.blogspot.com/-56Kz5T5WL04/Wn_KIg1oEkI/AAAAAAAAC1I/vCszFiZ8SjkW22dAKeCfml74SSfy1i_7wCLcBGAs/s1600/mvvmready.png" alt="MvvmReady Logo"></p>-->
-    
 <h1 align="center">MvvmReady</h1>
 
 <p align="center">Make cross-platform app MVVM-Ready. Lightweight with only one small binary/file.</p>
