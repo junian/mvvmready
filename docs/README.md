@@ -75,13 +75,29 @@ public class ProfileViewModel: ViewModelBase
 
 It's a simple service locator.
 
-You can register interface to implementation by using `ServiceLocator.Current.Register<IInterface, Implementation>()`.
+You can register interface to implementation by using: 
 
-You can also register service to itself by using `ServiceLocator.Current.Register<Service>()`.
+```csharp
+ServiceLocator.Current.Register<IInterface, Implementation>();
+```
 
-You can register a singleton service by using `ServiceLocator.Current.Register<IInterface>(() => MyService.Instance)`.
+You can also register service to itself by using: 
 
-To get service object, use `ServiceLocator.Current.Get<IService>()`.
+```csharp
+ServiceLocator.Current.Register<Service>();
+```
+
+You can register a singleton service by using: 
+
+```csharp
+ServiceLocator.Current.Register<IInterface>(() => MyService.Instance);
+```
+
+To get service object, use:
+
+```csharp
+ServiceLocator.Current.Get<IService>();
+```
 
 ## License
 
